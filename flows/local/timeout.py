@@ -7,6 +7,8 @@ class TimeoutFlow(FlowSpec):
     @timeout(seconds=5)
     @step
     def start(self):
+        print(time.time())
+        print(time.time() % 10)
         for i in range(int(time.time() % 10)):
             print(i)
             time.sleep(1)
